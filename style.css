@@ -1,0 +1,98 @@
+
+:root {
+  --primary-color: #2c3e50;
+  --accent-color: #e67e22;
+  --bg-light: #f4f4f4;
+  --text-main: #333333;
+  --success: #27ae60;
+  --error: #c0392b;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--bg-light);
+  color: var(--text-main);
+  padding: 20px;
+}
+
+h1, h2, h3 {
+  color: var(--primary-color);
+}
+
+nav a {
+  text-decoration: none;
+}
+
+a, button {
+  background-color: var(--accent-color);
+  color: white;
+  padding: 8px 12px;
+  display: inline-block;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+a:hover, button:hover {
+  background-color: var(--primary-color);
+}
+
+a:active, button:active {
+  background-color: #1a252f;
+}
+
+a:focus, button:focus, input:focus {
+  outline: 3px solid var(--accent-color);
+}
+
+article {
+  display: inline-block;
+  width: 200px;
+  padding: 15px;
+  margin: 10px;
+  border-radius: 10px;
+  background-color: white;
+  border: 1px solid #ddd;
+  vertical-align: top;
+}
+
+article:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.cart-container:empty {
+  background-color: #ffe6e6;
+  padding: 20px;
+  border: 2px dashed var(--error);
+}
+
+.price::before {
+  content: "₱ ";
+  font-weight: bold;
+}
+
+input:required {
+  border: 2px solid var(--error);
+}
+
+input:valid {
+  border: 2px solid var(--success);
+}
+
+td:first-child {
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+ul li::marker {
+  color: var(--accent-color);
+}
+
+blockquote::before {
+  content: "“";
+  color: var(--accent-color);
+}
+
+blockquote::after {
+  content: "”";
+  color: var(--accent-color);
+}
