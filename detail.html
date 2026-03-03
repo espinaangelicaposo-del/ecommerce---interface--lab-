@@ -1,38 +1,54 @@
-<!DOCTYPE html>
-<html lang="en">
+ <!DOCTYPE html>
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>Product Detail</title>
-  <link rel="stylesheet" href="style.css">
+<title>Details</title>
+<link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<h1>Wireless Headphones</h1>
+<header>
+<nav>
+<h1>Product Details</h1>
+<ul>
+<li><a href="products.html">Back</a></li>
+</ul>
+</nav>
+</header>
 
+<main>
+
+<article>
+<img src="https://via.placeholder.com/300">
+
+<h2>Wireless Headphones Pro</h2>
+
+<p class="price">3999</p>
+
+<div class="table-wrapper">
 <table>
-  <tr>
-    <td>Color</td>
-    <td>Black</td>
-  </tr>
-  <tr>
-    <td>Battery Life</td>
-    <td>20 Hours</td>
-  </tr>
+<tr>
+<th>Spec</th>
+<th>Value</th>
+</tr>
+
+<tr>
+<td>Battery</td>
+<td>20 Hours</td>
+</tr>
+
+<tr>
+<td>Bluetooth</td>
+<td>5.0</td>
+</tr>
 </table>
+</div>
 
-<form>
-  <label>Quantity:
-    <input type="number" min="1" required>
-  </label>
-  <button>Add to Cart</button>
-</form>
+<button>Add to Cart</button>
 
-<section>
-  <h2>Reviews</h2>
-  <blockquote>
-    Excellent sound quality and comfortable design.
-  </blockquote>
-</section>
+</article>
+
+</main>
 
 </body>
 </html>

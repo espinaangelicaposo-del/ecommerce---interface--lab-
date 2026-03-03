@@ -1,35 +1,40 @@
-<!DOCTYPE html>
-<html lang="en">
+ <!DOCTYPE html>
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>Checkout</title>
-  <link rel="stylesheet" href="style.css">
+<title>Checkout</title>
+<link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
+<header>
+<nav>
 <h1>Checkout</h1>
+</nav>
+</header>
+
+<div class="checkout-container">
 
 <section>
-  <fieldset>
-    <legend>Shipping Address</legend>
-    <label>Name: <input type="text" required></label><br>
-    <label>Street: <input type="text" required></label><br>
-    <label>Zip Code: <input type="text" required></label>
-  </fieldset>
+
+<h2>Shipping Info</h2>
+
+<input type="text" placeholder="Name">
+<input type="text" placeholder="Address">
+
 </section>
 
-<form>
-  <h3>Payment Method</h3>
-  <label><input type="radio" name="payment" required> Credit Card</label>
-  <label><input type="radio" name="payment"> PayPal</label>
-</form>
-
 <aside>
-  <h3>Order Summary</h3>
-  <p>Wireless Headphones</p>
-  <p>Total: <span class="price">500</span></p>
-  <button>Place Order</button>
+
+<h2>Order Summary</h2>
+<p>Wireless Headphones</p>
+<p class="price">3999</p>
+
+<button>Place Order</button>
+
 </aside>
+
+</div>
 
 </body>
 </html>

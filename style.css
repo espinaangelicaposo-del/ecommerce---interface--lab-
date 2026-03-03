@@ -1,98 +1,185 @@
-
-:root {
-  --primary-color: #2c3e50;
-  --accent-color: #e67e22;
-  --bg-light: #f4f4f4;
-  --text-main: #333333;
-  --success: #27ae60;
-  --error: #c0392b;
+ *{
+margin:0;
+padding:0;
+box-sizing:border-box;
 }
 
-body {
-  font-family: Arial, sans-serif;
-  background-color: var(--bg-light);
-  color: var(--text-main);
-  padding: 20px;
+body{
+font-family:Arial,sans-serif;
+background:#f4f7fc;
 }
 
-h1, h2, h3 {
-  color: var(--primary-color);
+header{
+background:#1f3c88;
+color:white;
+padding:15px;
 }
 
-nav a {
-  text-decoration: none;
+header nav{
+display:flex;
+flex-direction:column;
+align-items:center;
+gap:10px;
 }
 
-a, button {
-  background-color: var(--accent-color);
-  color: white;
-  padding: 8px 12px;
-  display: inline-block;
-  border: none;
-  transition: all 0.3s ease;
+header ul{
+list-style:none;
+display:flex;
+flex-direction:column;
+gap:8px;
 }
 
-a:hover, button:hover {
-  background-color: var(--primary-color);
+header a{
+color:white;
+text-decoration:none;
+padding:8px 12px;
+border-radius:5px;
 }
 
-a:active, button:active {
-  background-color: #1a252f;
+header a:hover{
+background:#ff6b6b;
 }
 
-a:focus, button:focus, input:focus {
-  outline: 3px solid var(--accent-color);
+main{
+display:grid;
+grid-template-columns:1fr;
+gap:20px;
+padding:20px;
 }
 
-article {
-  display: inline-block;
-  width: 200px;
-  padding: 15px;
-  margin: 10px;
-  border-radius: 10px;
-  background-color: white;
-  border: 1px solid #ddd;
-  vertical-align: top;
+.products-layout{
+display:flex;
+flex-direction:column;
 }
 
-article:nth-child(even) {
-  background-color: #f9f9f9;
+aside{
+background:white;
+padding:20px;
 }
 
-.cart-container:empty {
-  background-color: #ffe6e6;
-  padding: 20px;
-  border: 2px dashed var(--error);
+article{
+background:white;
+padding:20px;
+border-radius:8px;
+text-align:center;
+box-shadow:0 5px 15px rgba(0,0,0,0.08);
 }
 
-.price::before {
-  content: "₱ ";
-  font-weight: bold;
+article img{
+max-width:100%;
+height:auto;
 }
 
-input:required {
-  border: 2px solid var(--error);
+.price{
+color:#ff6b6b;
+font-weight:bold;
 }
 
-input:valid {
-  border: 2px solid var(--success);
+.price::before{
+content:"₱ ";
 }
 
-td:first-child {
-  font-weight: bold;
-  color: var(--primary-color);
+button{
+padding:8px 15px;
+border:none;
+background:#1f3c88;
+color:white;
+border-radius:5px;
+cursor:pointer;
 }
 
-ul li::marker {
-  color: var(--accent-color);
+button:hover{
+background:#ff6b6b;
 }
 
-blockquote::before {
-  content: "“";
-  color: var(--accent-color);
+.checkout-container{
+display:flex;
+flex-direction:column;
+gap:20px;
+padding:20px;
 }
 
-blockquote::after {
-  content: "”";
-  color: var(--accent-color);
+input{
+width:100%;
+padding:10px;
+margin:5px 0;
+}
+
+.table-wrapper{
+overflow-x:auto;
+}
+
+table{
+width:100%;
+border-collapse:collapse;
+}
+
+th,td{
+border:1px solid #ddd;
+padding:10px;
+text-align:center;
+}
+
+th{
+background:#1f3c88;
+color:white;
+}
+
+.signup-section{
+display:flex;
+justify-content:center;
+align-items:center;
+min-height:80vh;
+}
+
+.signup-box{
+background:white;
+padding:30px;
+border-radius:8px;
+width:100%;
+max-width:400px;
+}
+
+@media(min-width:481px){
+main{
+grid-template-columns:repeat(2,1fr);
+}
+
+header ul{
+flex-direction:row;
+}
+}
+
+@media(min-width:769px){
+header nav{
+flex-direction:row;
+justify-content:space-between;
+}
+
+main{
+grid-template-columns:repeat(4,minmax(200px,1fr));
+}
+
+.products-layout{
+display:grid;
+grid-template-columns:25% 75%;
+}
+}
+article{
+transition:transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+article:hover{
+transform:translateY(-10px) scale(1.03);
+box-shadow:0 10px 25px rgba(0,0,0,0.15);
+}
+
+article:active{
+animation:selectBounce 0.4s ease;
+}
+
+@keyframes selectBounce{
+0%{transform:scale(1);}
+50%{transform:scale(0.95);}
+100%{transform:scale(1.03);}
 }

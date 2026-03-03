@@ -1,35 +1,53 @@
-<!DOCTYPE html>
-<html lang="en">
+ <!DOCTYPE html>
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>Products</title>
-  <link rel="stylesheet" href="style.css">
+<title>Products</title>
+<link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<h1>Wireless Headphones</h1>
+<header>
+<nav>
+<h1>Products</h1>
 
-<article>
-  <img src="product.jpg" alt="Wireless Headphones" width="150">
-  <h3>Wireless Headphones</h3>
-  <p class="price">500</p>
-  <a href="detail.html">View Details</a>
-</article>
+<ul>
+<li><a href="landing.html">Home</a></li>
+<li><a href="cart.html">Cart</a></li>
+<li><a href="signup.html">Sign Up</a></li>
+</ul>
 
-<article>
-  <img src="product.jpg" alt="Wireless Headphones" width="150">
-  <h3>Wireless Headphones</h3>
-  <p class="price">650</p>
-  <a href="detail.html">View Details</a>
-</article>
+</nav>
+</header>
+
+<div class="products-layout">
 
 <aside>
-  <h3>Filter</h3>
-  <form>
-    <label><input type="checkbox"> On Sale</label><br>
-    <label><input type="radio" name="category"> Electronics</label>
-  </form>
+<h3>Filter</h3>
+<label><input type="checkbox"> Gaming</label>
+<label><input type="checkbox"> Studio</label>
+<label><input type="checkbox"> Noise Cancelling</label>
 </aside>
+
+<main>
+
+<article>
+<img src="https://via.placeholder.com/200">
+<h3>Wireless Headphones Pro</h3>
+<p class="price">3999</p>
+<a href="cart.html"><button>View Details</button></a>
+</article>
+
+<article>
+<img src="https://via.placeholder.com/200">
+<h3>Bass Boost Headphones</h3>
+<p class="price">2999</p>
+<a href="detail.html"><button>View Details</button></a>
+</article>
+
+</main>
+
+</div>
 
 </body>
 </html>
